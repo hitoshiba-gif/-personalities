@@ -550,3 +550,27 @@ nav.scrolled {
   background: linear-gradient(90deg, #ffc0cb, #ffb6c1);
   border-radius: 4px;
 }
+
+/* index のドーナツ用 */
+.donut-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:12px;
+}
+.donut-card{
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+  text-align:center;
+  padding:12px;
+}
+
+/* スマホは縦1列に */
+@media (max-width: 768px){
+  .donut-row{ grid-template-columns:1fr; }
+  .donut-card{ max-width:340px; margin:0 auto; }
+  .donut-card .donut{ width:140px; height:140px; margin:0 auto; }
+  .donut-card .donut-num{ font-size:16px; }
+  .donut-card .donut-title{ font-size:15px; }
+}
