@@ -128,8 +128,8 @@ const AXES = [
   { key:'balance', codePos:'U', codeNeg:'L', label:'重心軸（Balance）',
     posLabel:'上重心（U）', negLabel:'下重心（L）', threshold:3.5 },
 
-  { key:'line',    codePos:'C', codeNeg:'S', label:'ライン軸（Line）',
-    posLabel:'直線（C）', negLabel:'曲線（S）', threshold:3.5 },
+  { key:'line',    codePos:'S', codeNeg:'C', label:'ライン軸（Line）',
+    posLabel:'直線（S）', negLabel:'曲線（C）', threshold:3.5 },
 ];
 /* ───────── 質問（各12問・5段階） ───────── */
 const QUESTIONS = {
@@ -199,7 +199,7 @@ const TYPE_META = {
     name:'骨格コアラ(Romantic Wave)', base:'WAVE', emoji:'🐨', animal:'コアラ',
     image:'images/BNLS.jpg',
     concept:'甘くやわらか、包容感のあるロマン。',
-    body:'B=やや骨感 / W=広め / L=下重心 / S=曲線強め。上半身は華奢、腰〜ヒップに丸み。骨の主張は弱く、やわらかな陰影と曲線が印象の中心。',
+    body:'B=やや骨感 / W=広め / L=下重心 / S=直線強め。上半身は華奢、腰〜ヒップに丸み。骨の主張は弱く、やわらかな陰影と曲線が印象の中心。',
     brandHints:['SNIDEL','CELFORD','TOCCA','Lily Brown','FRAY I.D','IÉNA','Noela'],
     styleNotes:[
       '薄手〜中厚で落ち感のある素材（シフォン/サテン/ジョーゼット）',
@@ -219,7 +219,7 @@ const TYPE_META = {
     name:'骨格ウルフ(Urban Elegance)', base:'WAVE', emoji:'🐺', animal:'オオカミ',
     image:'images/MNLC.jpg',
     concept:'静かで芯のある優しさ、穏やかに知的な洗練。',
-    body:'M=肉感寄り / N=コンパクト / L=下重心 / C=直線寄り。柔らかさに直線が混ざる。脚に厚みが出やすいので上にポイントを。',
+    body:'M=肉感寄り / N=コンパクト / L=下重心 / C=曲線寄り。柔らかさに直線が混ざる。脚に厚みが出やすいので上にポイントを。',
     brandHints:['IÉNA','Mila Owen','Plage','N.O.R.C','URBAN RESEARCH','TOMORROWLAND'],
     styleNotes:[
       '“Iライン”を意識した縦長設計',
@@ -239,7 +239,7 @@ const TYPE_META = {
     name:'骨格バタフライ(Light Wave)', base:'WAVE', emoji:'🦋', animal:'バタフライ',
     image:'images/MWLC.jpg',
     concept:'風に舞う透明感、まっすぐで軽やかな均衡。',
-    body:'M=肉感 / W=広め / L=下重心 / C=直線。腰〜腿に厚み。軽い素材と縦ラインで“軽やかな直線”を作ると◎。',
+    body:'M=肉感 / W=広め / L=下重心 / C=曲線。腰〜腿に厚み。軽い素材と縦ラインで“軽やかな直線”を作ると◎。',
     brandHints:['N.O.R.C','IÉNA','UNIQLO','BEAUTY&YOUTH','TOMORROWLAND','LE PHIL'],
     styleNotes:[
       'ハイウエストで脚長補正',
@@ -259,7 +259,7 @@ const TYPE_META = {
     name:'骨格ハムスター(Natural Girly)', base:'WAVE', emoji:'🐹', animal:'ハムスター',
     image:'images/MWLS.jpg',
     concept:'丸みと温かみ、ふんわりとした可憐さ。',
-    body:'M=肉感 / W=広め / L=下重心 / S=曲線。全体にふわっと厚み。可憐ディテールは小さめ＆上側に集約。',
+    body:'M=肉感 / W=広め / L=下重心 / S=直線。全体にふわっと厚み。可憐ディテールは小さめ＆上側に集約。',
     brandHints:['SNIDEL','earth music&ecology','Kastane','LOWRYS FARM','tocco closet'],
     styleNotes:[
       'Aライン/フレア/ティアードで“下に落ちる”を活かす',
@@ -279,7 +279,7 @@ const TYPE_META = {
     name:'骨格ドーブ（Classic Feminine）', base:'WAVE', emoji:'🕊', animal:'白鳩',
     image:'images/MNLS.jpg',
     concept:'柔らかく上品、穏やかに香るエレガンス。',
-    body:'M=肉感 / N=コンパクト / L=下重心 / S=曲線。上半身は華奢で胸〜ウエストはなだらか、下半身に安定。',
+    body:'M=肉感 / N=コンパクト / L=下重心 / S=直線。上半身は華奢で胸〜ウエストはなだらか、下半身に安定。',
     brandHints:['TOCCA','EPOCA','FOXEY','ANAYI','Apuweiser-riche'],
     styleNotes:[
       'ハート/ラウンド/浅Vの女性的な襟型',
@@ -299,7 +299,7 @@ const TYPE_META = {
     name:'骨格テディ(Earth Wave)', base:'WAVE', emoji:'🐻', animal:'クマ',
     image:'images/BNLC.jpg',
     concept:'あたたかく包み込む安定感、癒しの重心。',
-    body:'B=骨感 / N=コンパクト / L=下重心 / C=直線寄り。体幹は安定、直線の芯を感じるがやわらか素材で馴染む。',
+    body:'B=骨感 / N=コンパクト / L=下重心 / C=曲線寄り。体幹は安定、直線の芯を感じるがやわらか素材で馴染む。',
     brandHints:['URBAN RESEARCH ROSSO','Plage','DOORS','JOURNAL STANDARD relume','IÉNA'],
     styleNotes:[
       'ロングカーデ/ライトアウターで“包み”を作る',
@@ -320,7 +320,7 @@ const TYPE_META = {
     name:'骨格ユニコーン(Urban Natural)', base:'NATURAL', emoji:'🦄', animal:'ユニコーン',
     image:'images/BWUC.jpg',
     concept:'直線×余白、幻想と構造の調和。',
-    body:'B=骨感 / W=広め / U=上重心 / C=直線。手足が長くフレームの存在感が強い。余白を残すミニマルが映える。',
+    body:'B=骨感 / W=広め / U=上重心 / C=曲線。手足が長くフレームの存在感が強い。余白を残すミニマルが映える。',
     brandHints:['JOURNAL STANDARD','UNITED ARROWS','BEAUTY&YOUTH','AURALEE','YLEVE','TODAYFUL'],
     styleNotes:[
       '直線×ゆとりのボックス/ストレート',
@@ -340,7 +340,7 @@ const TYPE_META = {
     name:'骨格イーグル(Fairy Natural)', base:'NATURAL', emoji:'🦅', animal:'タカ',
     image:'images/BWUS.jpg',
     concept:'軽やかで透徹した知性、俯瞰の美学。',
-    body:'B=骨感 / W=広め / U=上重心 / S=曲線寄り。骨の直線にほんのり曲線。上に軽さを集めると空気感が出る。',
+    body:'B=骨感 / W=広め / U=上重心 / S=直線寄り。骨の直線にほんのり曲線。上に軽さを集めると空気感が出る。',
     brandHints:['ENFÖLD','Deuxieme Classe','TOMORROWLAND','athoos','COS'],
     styleNotes:[
       '上半身コンパクト×下に直線レイヤー',
@@ -360,7 +360,7 @@ const TYPE_META = {
     name:'骨格フォックス(Classic Natural)', base:'NATURAL', emoji:'🦊', animal:'キツネ',
     image:'images/BWLC.jpg',
     concept:'端正で機敏、自然体の品格。',
-    body:'B=骨感 / W=広め / L=下重心 / C=直線。肩〜背中のフレームがすっきり。整った直線で“静の品格”。',
+    body:'B=骨感 / W=広め / L=下重心 / C=曲線。肩〜背中のフレームがすっきり。整った直線で“静の品格”。',
     brandHints:['IÉNA','Plage','TOMORROWLAND','BEAMS','URBAN RESEARCH'],
     styleNotes:[
       'シャツ/テーラードは薄手で端正に',
@@ -380,7 +380,7 @@ const TYPE_META = {
     name:'骨格バンビ(Pure Natural)', base:'NATURAL', emoji:'🦌', animal:'シカ',
     image:'images/BWLS.jpg',
     concept:'柔らかく静かな調和、森の中の安らぎ。',
-    body:'B=骨感 / W=広め / L=下重心 / S=曲線。直線骨格に柔らかい面、テクスチャーミックスで深みを出すと◎。',
+    body:'B=骨感 / W=広め / L=下重心 / S=直線。直線骨格に柔らかい面、テクスチャーミックスで深みを出すと◎。',
     brandHints:['nest Robe','Vermeerist BEAMS','Plage','Journal Standard L’essage'],
     styleNotes:[
       '下に落ちるAライン/バイアス',
@@ -421,7 +421,7 @@ const TYPE_META = {
     name:'骨格シャーク(Sporty Cool)', base:'STRAIGHT', emoji:'🦈', animal:'サメ',
     image:'images/MWUC.jpg',
     concept:'鋭くスマート、研ぎ澄まされたスピード感。',
-    body:'M=肉感 / W=広め / U=上重心 / C=直線。体幹に厚み、上に視線が集まる。機能素材の直線がハマる。',
+    body:'M=肉感 / W=広め / U=上重心 / C=曲線。体幹に厚み、上に視線が集まる。機能素材の直線がハマる。',
     brandHints:['NIKE Sportswear','adidas Originals','P.E NATION','COS','UNIQLO U'],
     styleNotes:[
       '直線的トラックパンツ/テーパード×短丈トップス',
@@ -441,7 +441,7 @@ const TYPE_META = {
     name:'骨格タイガー(Glamorous Cool)', base:'STRAIGHT', emoji:'🐅', animal:'トラ',
     image:'images/MNUC.jpg',
     concept:'立体感と色気、強い存在感。',
-    body:'M=肉感強 / N=コンパクト / U=上重心 / C=直線。胸肩ヒップに立体。ウエストを高くマークして彫刻的に。',
+    body:'M=肉感強 / N=コンパクト / U=上重心 / C=曲線。胸肩ヒップに立体。ウエストを高くマークして彫刻的に。',
     brandHints:['Max Mara','ZARA Premium','THE ROW','LE CIEL BLEU','N°21'],
     styleNotes:[
       '厚み×直線をいかすテーラード/コルセット風',
@@ -461,7 +461,7 @@ const TYPE_META = {
     name:'骨格ピーコック(Romantic Mode)', base:'STRAIGHT', emoji:'🦚', animal:'クジャク',
     image:'images/MNUS.jpg',
     concept:'力と優雅の共存、華やかな余韻。',
-    body:'M=肉感 / N=コンパクト / U=上重心 / S=曲線多め。直線骨格に柔らかな曲線要素。厚手サテンやタフタで“強×甘”の調和。',
+    body:'M=肉感 / N=コンパクト / U=上重心 / S=直線多め。直線骨格に柔らかな曲線要素。厚手サテンやタフタで“強×甘”の調和。',
     brandHints:['Self-Portrait','N°21','SNIDEL（ドレスライン）','FOXEY','Apuweiser-riche'],
     styleNotes:[
       'ウエストマーク強めのフィット&フレア/ペプラム',
@@ -481,7 +481,7 @@ const TYPE_META = {
     name:'骨格ドルフィン(Soft Active)', base:'STRAIGHT', emoji:'🐬', animal:'イルカ',
     image:'images/MWUS.jpg',
     concept:'すっきりとした流線、しなやかな躍動感。',
-    body:'M=肉感 / W=広め / U=上重心 / S=曲線寄り。直線ベースに滑らかな流線。軽量素材で“スピード感”。',
+    body:'M=肉感 / W=広め / U=上重心 / S=直線寄り。直線ベースに滑らかな流線。軽量素材で“スピード感”。',
     brandHints:['PLEATS PLEASE','ISSEY MIYAKE','UNIQLO U','Theory','Lululemon'],
     styleNotes:[
       '流線を描くプリーツ/ドレープ（過剰ギャザーは避ける）',
@@ -501,7 +501,7 @@ const TYPE_META = {
     name:'骨格オウル(Structural Mode)', base:'STRAIGHT', emoji:'🦉', animal:'フクロウ',
     image:'images/BNUC.jpg',
     concept:'精密で構築的、夜に光る知性。',
-    body:'B=骨感強 / N=コンパクト / U=上重心 / C=直線。建築的ラインが似合う究極の直線軸。モノトーン×構造でキメる。',
+    body:'B=骨感強 / N=コンパクト / U=上重心 / C=曲線。建築的ラインが似合う究極の直線軸。モノトーン×構造でキメる。',
     brandHints:['COS','Theory','AURALEE','HYKE','S’YTE','UNIQLO +J'],
     styleNotes:[
       'ショート丈ジャケットで上重心を強調',
@@ -555,7 +555,7 @@ function describeBodyByCode(code){
   const p1=(a==='B')?'骨格や関節の存在感がベース':'肉感・筋肉の厚みがベース';
   const p2=(b==='W')?'全体は軽やかで繊細':'全体は重厚で安定感あり';
   const p3=(c==='U')?'上重心で上半身に視線が集まりやすい':'下重心で下半身に安定が出やすい';
-  const p4=(d==='C')?'輪郭は直線寄りでシャープ':'輪郭は曲線寄りでソフト';
+  const p4=(d==='S')?'輪郭は直線寄りでシャープ':'輪郭は曲線寄りでソフト';
   return `【骨格印象まとめ】${p1}。${p2}。${p3}。${p4}。`;
 }
 function autoBrands(code, base){
@@ -573,7 +573,7 @@ function autoStyle(code){
   const fabric=(b==='N')?['薄手ウール','シフォン/ジョーゼット','スムースニット']:['ミッド〜厚手ウール','ハリのあるツイル','サテン/ジャカード'];
   const neck=(d==='C')?['クルー/ボート','スタンドカラー','浅Vシャツ']:['ラウンド/スカーフタイ','ハートネック','Vネック＋ドレープ'];
   const silhouette=(c==='U')?['短めトップス×ハイウエスト','Iラインワンピ','コンパクトJK']:['ロングトップス×落ち感ボトム','Aライン/フレア','ドロップショルダー'];
-  const lines=(d==='C')?['センタープレス','ストレートスカート','テーラード']:['バイアス/ドレープ','マーメイド/フレア','ギャザー控えめ'];
+  const lines=(d==='S')?['センタープレス','ストレートスカート','テーラード']:['バイアス/ドレープ','マーメイド/フレア','ギャザー控えめ'];
   return {fabric,neck,silhouette,lines};
 }
 
@@ -801,10 +801,11 @@ function renderResult(){
       <div class="card result">
         <h2>診断結果：<span class="ok">${code}</span> — <span class="em">${meta.emoji||''}</span> ${meta.name}</h2>
         <div class="tags">
-          <span class="tag">基盤体型：${baseLabel(meta.base)}</span>
-          ${meta.animal?`<span class="tag">motif Animal: ${meta.animal}</span>`:''}
-          <span class="tag kind">${nick}</span> 
-        </div>
+  <span class="tag">基盤体型：${baseLabel(meta.base)}</span>
+  <span class="tag kind">${nick}</span>
+  <span class="break"></span>   <!-- ★ここで改行を強制 -->
+  ${meta.animal?`<span class="tag">Animal: ${meta.animal}</span>`:''}
+</div>
         <img class="hero" src="${meta.image||''}" alt="${code} image" onerror="this.style.display='none'"/>
         <p class="concept">${meta.concept||''}</p>
 
