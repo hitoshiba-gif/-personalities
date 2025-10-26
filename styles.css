@@ -466,3 +466,87 @@ nav.scrolled {
   box-shadow: 0 6px 20px rgba(255, 182, 193, 0.25);
   background: rgba(255, 255, 255, 0.8);
 }
+/* === 📊 index グラフ表示調整 === */
+
+/* 🩷 ドーナツ3つを並べるコンテナ */
+.donut-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* 🧁 各ドーナツカード */
+.donut-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  padding: 12px;
+}
+
+/* 💫 モバイル対応（600px以下で縦並びに） */
+@media (max-width: 800px) {
+  .donut-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .donut-card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .donut-card .donut {
+    width: 120px;
+    height: 120px;
+  }
+
+  .donut-card .donut-num {
+    font-size: 16px;
+  }
+
+  .donut-card .donut-title {
+    font-size: 15px;
+  }
+}
+
+/* 🩵 16タイプのグリッド */
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* 📱 モバイルでは1〜2列で見やすく */
+@media (max-width: 700px) {
+  .type-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* 各タイプカードの内部 */
+.type-cell {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.type-ico {
+  font-size: 26px;
+  margin-right: 10px;
+}
+.type-meta {
+  flex: 1;
+}
+
+/* 棒グラフのバー */
+.type-bar i {
+  display: block;
+  height: 6px;
+  background: linear-gradient(90deg, #ffc0cb, #ffb6c1);
+  border-radius: 4px;
+}
