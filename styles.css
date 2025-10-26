@@ -663,3 +663,56 @@ footer a:hover {
   color: #5e4a50;
   font-size: 0.95rem;
 }
+
+/* ---- ブランドチップのはみ出し対策（スマホ最適化） ---- */
+
+/* コンテナをフレックスにして折り返し */
+.chips.brand-chips{
+  display: flex;
+  flex-wrap: wrap;        /* ← これで改行する */
+  gap: 8px;               /* すき間 */
+  row-gap: 8px;
+  align-items: flex-start;
+  margin-top: 6px;
+  overflow: visible;      /* 親の影や丸角が切れないように */
+  max-width: 100%;
+}
+
+/* 各チップは可変幅でOK、必要なら省略表示 */
+.chips.brand-chips .chip{
+  display: inline-flex;
+  align-items: center;
+  flex: 0 1 auto;         /* 伸びず、必要なら縮む */
+  min-width: 0;           /* Safari のはみ出し対策 */
+  max-width: 100%;
+  white-space: normal;    /* ← nowrap が効いていたら上書き */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 6px 10px;
+  border-radius: 9999px;
+}
+
+/* スマホでは少しだけ小さくして収まり良く */
+@media (max-width: 480px){
+  .chips.brand-chips .chip{
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+/* --- ネストしたカードのはみ出し防止（モバイル） --- */
+.card .card{
+  margin: 12px 0;           /* 親と同じ左右内側に収める */
+  width: auto;              /* 幅を親の内側に合わせる */
+}
+
+/* 画像そのものを完全レスポンシブに */
+.card img.hero{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;      /* お好みで */
+}
+
+/* 念のため親カードで横スクロールを出さない */
+.card.result{ overflow: hidden; }
